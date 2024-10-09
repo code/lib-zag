@@ -1,5 +1,43 @@
 # @zag-js/dom-query
 
+## 0.74.2
+
+## 0.74.1
+
+## 0.74.0
+
+## 0.73.1
+
+## 0.73.0
+
+## 0.72.0
+
+## 0.71.0
+
+### Minor Changes
+
+- [`b3a251e`](https://github.com/chakra-ui/zag/commit/b3a251e5e10b9b27af353e0f41117329846b14e9) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - We no longer ship `src` files in the packages.
+
+## 0.70.0
+
+## 0.69.0
+
+### Minor Changes
+
+- [`bf57d7b`](https://github.com/chakra-ui/zag/commit/bf57d7b3933daf9974eaefc443da6f3c37706bb4) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - Improve support for focus visible across components.
+
+  - **Switch, Checkbox, Radio Group:** The `data-focus-visible` attribute to the selected radio button when it is
+    interacted with the keyboard.
+  - **Tooltip:** Focus behavior only opens when the tooltip trigger is focused with keyboard.
+
+## 0.68.1
+
+## 0.68.0
+
+## 0.67.0
+
 ## 0.66.1
 
 ## 0.66.0

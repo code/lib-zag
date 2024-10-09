@@ -1,3 +1,4 @@
+// @ts-ignore
 import formatHighlight from "json-format-highlight"
 
 interface Dict {
@@ -27,7 +28,11 @@ export function stringifyState(state: Dict, omit?: string[]) {
           return value.toString()
         }
 
-        if (value?.toJSON) {
+        if (typeof value?.json === "function") {
+          return value.json()
+        }
+
+        if (typeof value?.toJSON === "function") {
           return value.toJSON()
         }
 

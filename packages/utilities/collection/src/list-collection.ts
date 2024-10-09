@@ -275,7 +275,7 @@ export class ListCollection<T extends CollectionItem = CollectionItem> {
     this.items.splice(toIndex, 0, removed)
   }
 
-  toJSON() {
+  json() {
     return {
       size: this.size,
       first: this.firstValue,

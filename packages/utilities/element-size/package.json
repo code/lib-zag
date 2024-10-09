@@ -1,6 +1,6 @@
 {
   "name": "@zag-js/element-size",
-  "version": "0.66.1",
+  "version": "0.74.2",
   "description": "Observer the size of an element over time",
   "keywords": [
     "js",
@@ -13,8 +13,7 @@
   "repository": "https://github.com/chakra-ui/zag/tree/main/packages/utilities/element-size",
   "sideEffects": false,
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
     "build": "tsup",

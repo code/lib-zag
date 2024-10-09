@@ -29,7 +29,7 @@ describe("tree collection", () => {
 
     rootNode.insertChild(new TreeNode({ value: "child3" }), "branch1")
 
-    expect(rootNode).toMatchInlineSnapshot(`
+    expect(rootNode.json()).toMatchInlineSnapshot(`
       {
         "children": [
           {
@@ -78,97 +78,106 @@ describe("tree collection", () => {
   test("reparent: lvl 0 -> lvl 1", () => {
     rootNode.reparentNode("child1", { value: "child1-1", depth: 1 })
 
-    expect(rootNode.children).toMatchInlineSnapshot(`
-      [
-        {
-          "children": [
-            {
-              "parent": "branch1",
-              "value": "child1-1",
-            },
-            {
-              "parent": "branch1",
-              "value": "child1",
-            },
-            {
-              "parent": "branch1",
-              "value": "child1-2",
-            },
-          ],
-          "parent": "root",
-          "value": "branch1",
-        },
-        {
-          "parent": "root",
-          "value": "child2",
-        },
-      ]
+    expect(rootNode.json()).toMatchInlineSnapshot(`
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "parent": "branch1",
+                "value": "child1-1",
+              },
+              {
+                "parent": "branch1",
+                "value": "child1",
+              },
+              {
+                "parent": "branch1",
+                "value": "child1-2",
+              },
+            ],
+            "parent": "root",
+            "value": "branch1",
+          },
+          {
+            "parent": "root",
+            "value": "child2",
+          },
+        ],
+        "value": "root",
+      }
     `)
   })
 
   test("reparent: lvl 1 -> lvl 0", () => {
     rootNode.reparentNode("child1-1", { value: "child1", depth: 0 })
 
-    expect(rootNode.children).toMatchInlineSnapshot(`
-      [
-        {
-          "children": [
-            {
-              "parent": "branch1",
-              "value": "child1-2",
-            },
-          ],
-          "parent": "root",
-          "value": "branch1",
-        },
-        {
-          "parent": "root",
-          "value": "child1",
-        },
-        {
-          "parent": "root",
-          "value": "child1-1",
-        },
-        {
-          "parent": "root",
-          "value": "child2",
-        },
-      ]
+    expect(rootNode.json()).toMatchInlineSnapshot(`
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "parent": "branch1",
+                "value": "child1-2",
+              },
+            ],
+            "parent": "root",
+            "value": "branch1",
+          },
+          {
+            "parent": "root",
+            "value": "child1",
+          },
+          {
+            "parent": "root",
+            "value": "child1-1",
+          },
+          {
+            "parent": "root",
+            "value": "child2",
+          },
+        ],
+        "value": "root",
+      }
     `)
   })
 
   test("append child", () => {
     rootNode.findNode("branch1")?.appendChild(new TreeNode({ value: "child1-3" }))
 
-    expect(rootNode.children).toMatchInlineSnapshot(`
-      [
-        {
-          "children": [
-            {
-              "parent": "branch1",
-              "value": "child1-1",
-            },
-            {
-              "parent": "branch1",
-              "value": "child1-2",
-            },
-            {
-              "parent": "branch1",
-              "value": "child1-3",
-            },
-          ],
-          "parent": "root",
-          "value": "branch1",
-        },
-        {
-          "parent": "root",
-          "value": "child1",
-        },
-        {
-          "parent": "root",
-          "value": "child2",
-        },
-      ]
+    expect(rootNode.json()).toMatchInlineSnapshot(`
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "parent": "branch1",
+                "value": "child1-1",
+              },
+              {
+                "parent": "branch1",
+                "value": "child1-2",
+              },
+              {
+                "parent": "branch1",
+                "value": "child1-3",
+              },
+            ],
+            "parent": "root",
+            "value": "branch1",
+          },
+          {
+            "parent": "root",
+            "value": "child1",
+          },
+          {
+            "parent": "root",
+            "value": "child2",
+          },
+        ],
+        "value": "root",
+      }
     `)
   })
 

@@ -1,5 +1,4 @@
 import * as datePicker from "@zag-js/date-picker"
-import { getYearsRange } from "@zag-js/date-utils"
 import { normalizeProps, useMachine } from "@zag-js/react"
 import { datePickerControls } from "@zag-js/shared"
 import { useId } from "react"
@@ -45,6 +44,8 @@ export default function Page() {
           <button {...api.getTriggerProps()}>🗓</button>
         </div>
 
+        <button {...api.getPresetTriggerProps({ value: "last7Days" })}>Last 7 days</button>
+
         <div {...api.getPositionerProps()}>
           <div {...api.getContentProps()}>
             <div style={{ marginBottom: "20px" }}>
@@ -57,9 +58,9 @@ export default function Page() {
               </select>
 
               <select {...api.getYearSelectProps()}>
-                {getYearsRange({ from: 1_000, to: 4_000 }).map((year, i) => (
-                  <option key={i} value={year}>
-                    {year}
+                {api.getYears().map((year, i) => (
+                  <option key={i} value={year.value}>
+                    {year.label}
                   </option>
                 ))}
               </select>

@@ -11,6 +11,7 @@ import {
   getTodayDate,
   getUnitDuration,
   getWeekDays,
+  getYearsRange,
   isDateDisabled,
   isDateEqual,
   isDateInvalid,
@@ -94,10 +95,13 @@ export function connect<T extends PropTypes>(state: State, send: Send, normalize
   }
 
   function getYears() {
-    return getDecadeRange(focusedValue.year).map((year) => ({
-      label: year.toString(),
-      value: year,
-    }))
+    const range = getYearsRange({ from: min?.year ?? 1900, to: max?.year ?? 2100 })
+    return range.map((year) => ({ label: year.toString(), value: year }))
+  }
+
+  function getDecadeYears(year?: number) {
+    const range = getDecadeRange(year ?? focusedValue.year)
+    return range.map((year) => ({ label: year.toString(), value: year }))
   }
 
   function isUnavailable(date: DateValue) {
@@ -239,7 +243,7 @@ export function connect<T extends PropTypes>(state: State, send: Send, normalize
     getMonths,
     getYearsGrid(props = {}) {
       const { columns = 1 } = props
-      return chunk(getYears(), columns)
+      return chunk(getDecadeYears(), columns)
     },
     getDecade() {
       const years = getDecadeRange(focusedValue.year)
@@ -311,6 +315,7 @@ export function connect<T extends PropTypes>(state: State, send: Send, normalize
         "data-state": open ? "open" : "closed",
         "data-placement": currentPlacement,
         id: dom.getContentId(state.context),
+        tabIndex: -1,
         role: "application",
         "aria-roledescription": "datepicker",
         "aria-label": translations.content,
@@ -700,7 +705,7 @@ export function connect<T extends PropTypes>(state: State, send: Send, normalize
           event.preventDefault()
         },
         onChange(event) {
-          const { value } = event.target
+          const value = event.currentTarget.value
           send({ type: "INPUT.CHANGE", value: ensureValidCharacters(value, separator), index })
         },
       })

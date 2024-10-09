@@ -1,5 +1,190 @@
 # @zag-js/popover
 
+## 0.74.2
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.74.2
+  - @zag-js/core@0.74.2
+  - @zag-js/types@0.74.2
+  - @zag-js/aria-hidden@0.74.2
+  - @zag-js/utils@0.74.2
+  - @zag-js/dismissable@0.74.2
+  - @zag-js/dom-query@0.74.2
+  - @zag-js/popper@0.74.2
+  - @zag-js/remove-scroll@0.74.2
+
+## 0.74.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.74.1
+  - @zag-js/core@0.74.1
+  - @zag-js/types@0.74.1
+  - @zag-js/aria-hidden@0.74.1
+  - @zag-js/utils@0.74.1
+  - @zag-js/dismissable@0.74.1
+  - @zag-js/dom-query@0.74.1
+  - @zag-js/popper@0.74.1
+  - @zag-js/remove-scroll@0.74.1
+
+## 0.74.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.74.0
+  - @zag-js/core@0.74.0
+  - @zag-js/types@0.74.0
+  - @zag-js/aria-hidden@0.74.0
+  - @zag-js/utils@0.74.0
+  - @zag-js/dismissable@0.74.0
+  - @zag-js/dom-query@0.74.0
+  - @zag-js/popper@0.74.0
+  - @zag-js/remove-scroll@0.74.0
+
+## 0.73.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.73.1
+  - @zag-js/core@0.73.1
+  - @zag-js/types@0.73.1
+  - @zag-js/aria-hidden@0.73.1
+  - @zag-js/utils@0.73.1
+  - @zag-js/dismissable@0.73.1
+  - @zag-js/dom-query@0.73.1
+  - @zag-js/popper@0.73.1
+  - @zag-js/remove-scroll@0.73.1
+
+## 0.73.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/dismissable@0.73.0
+  - @zag-js/anatomy@0.73.0
+  - @zag-js/core@0.73.0
+  - @zag-js/types@0.73.0
+  - @zag-js/aria-hidden@0.73.0
+  - @zag-js/utils@0.73.0
+  - @zag-js/dom-query@0.73.0
+  - @zag-js/popper@0.73.0
+  - @zag-js/remove-scroll@0.73.0
+
+## 0.72.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.72.0
+  - @zag-js/core@0.72.0
+  - @zag-js/types@0.72.0
+  - @zag-js/aria-hidden@0.72.0
+  - @zag-js/utils@0.72.0
+  - @zag-js/dismissable@0.72.0
+  - @zag-js/dom-query@0.72.0
+  - @zag-js/popper@0.72.0
+  - @zag-js/remove-scroll@0.72.0
+
+## 0.71.0
+
+### Minor Changes
+
+- [`b3a251e`](https://github.com/chakra-ui/zag/commit/b3a251e5e10b9b27af353e0f41117329846b14e9) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - We no longer ship `src` files in the packages.
+
+### Patch Changes
+
+- Updated dependencies [[`b3a251e`](https://github.com/chakra-ui/zag/commit/b3a251e5e10b9b27af353e0f41117329846b14e9)]:
+  - @zag-js/core@0.71.0
+  - @zag-js/anatomy@0.71.0
+  - @zag-js/types@0.71.0
+  - @zag-js/aria-hidden@0.71.0
+  - @zag-js/utils@0.71.0
+  - @zag-js/dismissable@0.71.0
+  - @zag-js/dom-query@0.71.0
+  - @zag-js/popper@0.71.0
+  - @zag-js/remove-scroll@0.71.0
+
+## 0.70.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.70.0
+  - @zag-js/core@0.70.0
+  - @zag-js/types@0.70.0
+  - @zag-js/aria-hidden@0.70.0
+  - @zag-js/utils@0.70.0
+  - @zag-js/dismissable@0.70.0
+  - @zag-js/dom-query@0.70.0
+  - @zag-js/popper@0.70.0
+  - @zag-js/remove-scroll@0.70.0
+
+## 0.69.0
+
+### Patch Changes
+
+- Updated dependencies [[`bf57d7b`](https://github.com/chakra-ui/zag/commit/bf57d7b3933daf9974eaefc443da6f3c37706bb4)]:
+  - @zag-js/dom-query@0.69.0
+  - @zag-js/dismissable@0.69.0
+  - @zag-js/popper@0.69.0
+  - @zag-js/remove-scroll@0.69.0
+  - @zag-js/anatomy@0.69.0
+  - @zag-js/core@0.69.0
+  - @zag-js/types@0.69.0
+  - @zag-js/aria-hidden@0.69.0
+  - @zag-js/utils@0.69.0
+
+## 0.68.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.68.1
+  - @zag-js/core@0.68.1
+  - @zag-js/types@0.68.1
+  - @zag-js/aria-hidden@0.68.1
+  - @zag-js/utils@0.68.1
+  - @zag-js/dismissable@0.68.1
+  - @zag-js/dom-query@0.68.1
+  - @zag-js/popper@0.68.1
+  - @zag-js/remove-scroll@0.68.1
+
+## 0.68.0
+
+### Patch Changes
+
+- Updated dependencies [[`74d1848`](https://github.com/chakra-ui/zag/commit/74d18489fb64d53539fc62e5cfce7c5906720254)]:
+  - @zag-js/popper@0.68.0
+  - @zag-js/anatomy@0.68.0
+  - @zag-js/core@0.68.0
+  - @zag-js/types@0.68.0
+  - @zag-js/aria-hidden@0.68.0
+  - @zag-js/utils@0.68.0
+  - @zag-js/dismissable@0.68.0
+  - @zag-js/dom-query@0.68.0
+  - @zag-js/remove-scroll@0.68.0
+
+## 0.67.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.67.0
+  - @zag-js/core@0.67.0
+  - @zag-js/types@0.67.0
+  - @zag-js/aria-hidden@0.67.0
+  - @zag-js/utils@0.67.0
+  - @zag-js/dismissable@0.67.0
+  - @zag-js/dom-query@0.67.0
+  - @zag-js/popper@0.67.0
+  - @zag-js/remove-scroll@0.67.0
+
 ## 0.66.1
 
 ### Patch Changes

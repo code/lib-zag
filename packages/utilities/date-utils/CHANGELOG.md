@@ -1,5 +1,53 @@
 # @zag-js/date-utils
 
+## 0.74.2
+
+## 0.74.1
+
+### Patch Changes
+
+- [`a4b4cdb`](https://github.com/chakra-ui/zag/commit/a4b4cdbad37a1d935c248c15075ed0dd5ed56aed) Thanks
+  [@cschroeter](https://github.com/cschroeter)! - fix(time-picker): move @internationalized/date to the list of peer
+  deps"
+
+## 0.74.0
+
+## 0.73.1
+
+## 0.73.0
+
+## 0.72.0
+
+## 0.71.0
+
+### Minor Changes
+
+- [`b3a251e`](https://github.com/chakra-ui/zag/commit/b3a251e5e10b9b27af353e0f41117329846b14e9) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - We no longer ship `src` files in the packages.
+
+## 0.70.0
+
+## 0.69.0
+
+## 0.68.1
+
+### Patch Changes
+
+- [#1845](https://github.com/chakra-ui/zag/pull/1845)
+  [`16cde4d`](https://github.com/chakra-ui/zag/commit/16cde4dcf48a6e9bf300edc23c115ff09534ffd2) Thanks
+  [@anubra266](https://github.com/anubra266)! - Fix issue where partial YY format in date string was not parsed
+  correctly.
+
+## 0.68.0
+
+## 0.67.0
+
+### Patch Changes
+
+- [`b2e9a6e`](https://github.com/chakra-ui/zag/commit/b2e9a6e8255799b164a2ec26b813159167a714ca) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - Fix issue where `getWeekDays` has incoherent behavior when both
+  locale and `startOfWeekProp` are set
+
 ## 0.66.1
 
 ## 0.66.0

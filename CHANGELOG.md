@@ -6,6 +6,226 @@ All notable changes to this project will be documented in this file.
 
 See the [Changesets](./.changeset) for the latest changes.
 
+## [0.74.2](./#0.74.0) - 2024-10-09
+
+### Fixed
+
+- **TimePicker**: Export missing `Time` type
+
+## [0.74.1](./#0.74.0) - 2024-10-09
+
+### Fixed
+
+- **TimePicker**: Resolve an issue that `@internationalized/date` was not declared as peer dependency.
+
+## [0.74.0](./#0.74.0) - 2024-10-09
+
+### Fixed
+
+- **TagsInput**: Fix issue where tags input doesn't navigate tags after removing with the delete key
+
+- **DatePicker**: Fix issue in date range picker where clicking a preset trigger and blurring the input resets the value
+  incorrectly.
+
+### Added
+
+- **ColorPicker**: Add support for `grey` named colors and `rebeccapurple` color resolution.
+
+### Changed
+
+- **DatePicker, TimePicker [BREAKING]**: Move `@internationalized/date` to peer dependency to prevent mismatching type errors.
+
+## [0.73.0](./#0.73.0) - 2024-09-30
+
+### Added
+
+- **Dialog**
+
+  - Add support for detecting outside clicks from parent windows when rendered within an iframe
+
+### Fixed
+
+- **Combobox**
+
+  - Fix issue where pressing enter without selecting an option leaves text in the input
+
+- **File Upload**
+
+  - Fix issue where `acceptedFiles` is removed after an invalid file is uploaded
+
+- **Dialog**
+
+  - Fix issue where dialog closes when positioner is scrollable and the scrollbar is clicked
+
+## [0.72.0](./#0.72.0) - 2024-09-28
+
+### Added
+
+- **Select, Combobox**
+
+  - Expose `multiple` and `disabled` in api to allow for designing custom UIs.
+
+### Changed
+
+- **Tour [BREAKING]**
+
+  - Refactor tour to be more robust and support programmatic control in wait steps.
+
+## [0.71.0](./#0.71.0) - 2024-09-23
+
+### Changed
+
+- **All Packages**
+
+  - Update all packages to no longer ship `src` directory.
+
+### Fixed
+
+- **Steps**
+
+  - Fix issue where past step item had `data-incomplete` on it.
+  - Rename `api.value` to `api.step`
+  - Rename `api.setValue` to `api.setStep`
+
+- **DatePicker**
+
+  - Fix issue where date picker could close when composed in a dialog or popover.
+
+### Added
+
+- **FileUpload**
+
+  - Add support for `api.getClearTriggerProps()` to render a clear trigger that clears the accepted files.
+
+## [0.70.0](./#0.70.0) - 2024-09-22
+
+### Changed
+
+- **Combobox**
+
+  - Remove `flip: false` default positioning option to ensure consistency with select.
+
+### Added
+
+- **Select, Tabs**
+
+  - Add support for `deselectable` prop to allow deselecting the current value by clicking on the item.
+
+## [0.69.0](./#0.69.0) - 2024-09-21
+
+### Fixed
+
+- **FileUpload**
+
+  - Fix issue where `directory: true` doesn't work
+
+### Added
+
+- **Switch, Checkbox, Radio Group**
+
+  - The `data-focus-visible` attribute to the selected radio button when it is interacted with the keyboard.
+
+- **Tooltip**
+
+  - Focus behavior only opens when the tooltip trigger is focused with keyboard.
+
+## [0.68.0](./#0.68.0) - 2024-09-15
+
+### Fixed
+
+- **DatePicker**
+
+  - Fix issue where partial YY format in date string was not parsed correctly.
+  - Fix issue in Vue.js where input value could not be changed by typing.
+  - Fix issue where setting controlled `min` and `max` values throws an error.
+
+- **TreeView**
+
+  - Fix issue where programmatic selection does not account for singular selection
+
+## [0.68.0](./#0.68.0) - 2024-09-12
+
+### Fixed
+
+- **Combobox**
+
+  - Fix issue where highlighted item was persistent when the collection is empty
+
+### Changed
+
+- **Timer**
+
+  - Introduces new area and control parts for better anatomy and structure.
+  - [BREAKING] Move `role"timer` to new area part.
+  - Automatically hide the action triggers based on the action prop passed.
+
+**BEFORE:**
+
+```tsx
+<div>
+  <div {...api.getRootProps()}>
+    <div {...api.getItemProps({ type: "days" })}>{api.formattedTime.days}</div>
+    <div {...api.getSeparatorProps()}>:</div>
+    <div {...api.getItemProps({ type: "hours" })}>{api.formattedTime.hours}</div>
+    <div {...api.getSeparatorProps()}>:</div>
+    <div {...api.getItemProps({ type: "minutes" })}>{api.formattedTime.minutes}</div>
+    <div {...api.getSeparatorProps()}>:</div>
+    <div {...api.getItemProps({ type: "seconds" })}>{api.formattedTime.seconds}</div>
+  </div>
+  <div>
+    <button {...api.getActionTriggerProps({ action: "start" })}>START</button>
+    <button {...api.getActionTriggerProps({ action: "pause" })}>PAUSE</button>
+    <button {...api.getActionTriggerProps({ action: "resume" })}>RESUME</button>
+    <button {...api.getActionTriggerProps({ action: "reset" })}>RESET</button>
+  </div>
+</div>
+```
+
+**AFTER:**
+
+```tsx
+<div {...api.getRootProps()}>
+  <div {...api.getAreaProps()}>
+    <div {...api.getItemProps({ type: "days" })}>{api.formattedTime.days}</div>
+    <div {...api.getSeparatorProps()}>:</div>
+    <div {...api.getItemProps({ type: "hours" })}>{api.formattedTime.hours}</div>
+    <div {...api.getSeparatorProps()}>:</div>
+    <div {...api.getItemProps({ type: "minutes" })}>{api.formattedTime.minutes}</div>
+    <div {...api.getSeparatorProps()}>:</div>
+    <div {...api.getItemProps({ type: "seconds" })}>{api.formattedTime.seconds}</div>
+  </div>
+  <div {...api.getControlProps()}>
+    <button {...api.getActionTriggerProps({ action: "start" })}>START</button>
+    <button {...api.getActionTriggerProps({ action: "pause" })}>PAUSE</button>
+    <button {...api.getActionTriggerProps({ action: "resume" })}>RESUME</button>
+    <button {...api.getActionTriggerProps({ action: "reset" })}>RESET</button>
+  </div>
+</div>
+```
+
+- **Popper**
+
+  - Add support for `hideWhenDetached` positioning option. This can be used in the `positioning` options for floating
+    components (select, popover, dialog, etc.)
+
+## [0.67.0](./#0.67.0) - 2024-09-10
+
+### Added
+
+- **Highlight**
+
+  - Released `@zag-js/highlight-word` package to help with highlighting text in a string.
+
+### Fixed
+
+- **Date Utils**
+
+  - Fixed issue where `getWeekDays` had inconsistent behavior when both locale and `startOfWeekProp` were set
+
+- **Menu**
+
+  - Fixed issue where lazy mounting the content caused the first menu item to not be focused when opened with keyboard
+
 ## [0.66.0](./#0.66.0) - 2024-09-05
 
 ### Fixed

@@ -148,7 +148,7 @@ export function connect<T extends PropTypes>(state: State, send: Send, normalize
         capture: state.context.capture,
         name: state.context.name,
         accept: state.context.acceptAttr,
-        webkitdirectory: state.context.capture ? "" : undefined,
+        webkitdirectory: state.context.directory ? "" : undefined,
         multiple: state.context.multiple || state.context.maxFiles > 1,
         onClick(event) {
           event.stopPropagation()
@@ -249,6 +249,22 @@ export function connect<T extends PropTypes>(state: State, send: Send, normalize
         id: dom.getLabelId(state.context),
         htmlFor: dom.getHiddenInputId(state.context),
         "data-disabled": dataAttr(disabled),
+      })
+    },
+
+    getClearTriggerProps() {
+      return normalize.button({
+        ...parts.clearTrigger.attrs,
+        dir: state.context.dir,
+        type: "button",
+        disabled,
+        hidden: state.context.acceptedFiles.length === 0,
+        "data-disabled": dataAttr(disabled),
+        onClick(event) {
+          if (event.defaultPrevented) return
+          if (disabled) return
+          send({ type: "FILES.CLEAR" })
+        },
       })
     },
   }

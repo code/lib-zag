@@ -38,7 +38,6 @@ export function machine<T extends CollectionItem>(userContext: UserDefinedContex
         collection: ctx.collection ?? collection.empty(),
         positioning: {
           placement: "bottom",
-          flip: false,
           sameWidth: true,
           ...ctx.positioning,
         },
@@ -295,6 +294,17 @@ export function machine<T extends CollectionItem>(userContext: UserDefinedContex
               },
             ],
             "INPUT.ENTER": [
+              // == group 1 ==
+              {
+                guard: and("isOpenControlled", "isCustomValue", not("hasHighlightedItem"), not("allowCustomValue")),
+                actions: ["revertInputValue", "invokeOnClose"],
+              },
+              {
+                guard: and("isCustomValue", not("hasHighlightedItem"), not("allowCustomValue")),
+                target: "focused",
+                actions: ["revertInputValue", "invokeOnClose"],
+              },
+              // == group 2 ==
               {
                 guard: and("isOpenControlled", "closeOnSelect"),
                 actions: ["selectHighlightedItem", "invokeOnClose"],
@@ -453,6 +463,17 @@ export function machine<T extends CollectionItem>(userContext: UserDefinedContex
               actions: ["highlightLastItem"],
             },
             "INPUT.ENTER": [
+              // == group 1 ==
+              {
+                guard: and("isOpenControlled", "isCustomValue", not("hasHighlightedItem"), not("allowCustomValue")),
+                actions: ["revertInputValue", "invokeOnClose"],
+              },
+              {
+                guard: and("isCustomValue", not("hasHighlightedItem"), not("allowCustomValue")),
+                target: "focused",
+                actions: ["revertInputValue", "invokeOnClose"],
+              },
+              // == group 2 ==
               {
                 guard: and("isOpenControlled", "closeOnSelect"),
                 actions: ["selectHighlightedItem", "invokeOnClose"],
@@ -792,7 +813,7 @@ export function machine<T extends CollectionItem>(userContext: UserDefinedContex
         highlightFirstItem(ctx) {
           raf(() => {
             const value = ctx.collection.firstValue
-            set.highlightedValue(ctx, value)
+            set.highlightedValue(ctx, value, true)
           })
         },
         highlightFirstItemIfNeeded(ctx) {

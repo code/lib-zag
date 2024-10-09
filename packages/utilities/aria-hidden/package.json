@@ -1,6 +1,6 @@
 {
   "name": "@zag-js/aria-hidden",
-  "version": "0.66.1",
+  "version": "0.74.2",
   "description": "Hide targets from screen readers",
   "keywords": [
     "js",
@@ -13,12 +13,11 @@
   "repository": "https://github.com/chakra-ui/zag/tree/main/packages/utilities/aria-hidden",
   "sideEffects": false,
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
     "build": "tsup",
-    "test": "jest --config ../../../jest.config.js --rootDir tests",
+    "test": "vitest",
     "lint": "eslint src",
     "test-ci": "pnpm test --ci --runInBand -u",
     "test-watch": "pnpm test --watchAll",

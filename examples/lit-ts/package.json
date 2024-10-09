@@ -41,8 +41,10 @@
     "@zag-js/file-upload": "workspace:*",
     "@zag-js/file-utils": "workspace:*",
     "@zag-js/floating-panel": "workspace:*",
+    "@zag-js/focus-trap": "workspace:*",
     "@zag-js/focus-visible": "workspace:*",
     "@zag-js/form-utils": "workspace:*",
+    "@zag-js/highlight-word": "workspace:*",
     "@zag-js/hover-card": "workspace:*",
     "@zag-js/i18n-utils": "workspace:*",
     "@zag-js/interact-outside": "workspace:*",
@@ -85,12 +87,12 @@
     "@zag-js/utils": "workspace:*",
     "form-serialize": "0.7.2",
     "lit": "^3.2.0",
-    "lucide-react": "0.428.0",
+    "lucide-react": "0.446.0",
     "match-sorter": "6.3.4",
     "textarea-caret": "^3.1.0"
   },
   "devDependencies": {
-    "typescript": "^5.5.4",
-    "vite": "^5.4.1"
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8"
   }
 }

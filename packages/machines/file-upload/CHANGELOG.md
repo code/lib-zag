@@ -1,5 +1,177 @@
 # @zag-js/file-upload
 
+## 0.74.2
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.74.2
+  - @zag-js/core@0.74.2
+  - @zag-js/types@0.74.2
+  - @zag-js/utils@0.74.2
+  - @zag-js/dom-query@0.74.2
+  - @zag-js/file-utils@0.74.2
+  - @zag-js/i18n-utils@0.74.2
+
+## 0.74.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.74.1
+  - @zag-js/core@0.74.1
+  - @zag-js/types@0.74.1
+  - @zag-js/utils@0.74.1
+  - @zag-js/dom-query@0.74.1
+  - @zag-js/file-utils@0.74.1
+  - @zag-js/i18n-utils@0.74.1
+
+## 0.74.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.74.0
+  - @zag-js/core@0.74.0
+  - @zag-js/types@0.74.0
+  - @zag-js/utils@0.74.0
+  - @zag-js/dom-query@0.74.0
+  - @zag-js/file-utils@0.74.0
+  - @zag-js/i18n-utils@0.74.0
+
+## 0.73.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.73.1
+  - @zag-js/core@0.73.1
+  - @zag-js/types@0.73.1
+  - @zag-js/utils@0.73.1
+  - @zag-js/dom-query@0.73.1
+  - @zag-js/file-utils@0.73.1
+  - @zag-js/i18n-utils@0.73.1
+
+## 0.73.0
+
+### Patch Changes
+
+- [`8bbea0a`](https://github.com/chakra-ui/zag/commit/8bbea0a00d7e87b213aad84f730cc5fb6a0ce199) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - Fix issue where `acceptedFiles` is removed after an invalid file
+  is uploaded
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.73.0
+  - @zag-js/core@0.73.0
+  - @zag-js/types@0.73.0
+  - @zag-js/utils@0.73.0
+  - @zag-js/dom-query@0.73.0
+  - @zag-js/file-utils@0.73.0
+  - @zag-js/i18n-utils@0.73.0
+
+## 0.72.0
+
+### Patch Changes
+
+- Updated dependencies [[`cdeaed6`](https://github.com/chakra-ui/zag/commit/cdeaed620f918a1684934081815e94ed76a8c388)]:
+  - @zag-js/i18n-utils@0.72.0
+  - @zag-js/file-utils@0.72.0
+  - @zag-js/anatomy@0.72.0
+  - @zag-js/core@0.72.0
+  - @zag-js/types@0.72.0
+  - @zag-js/utils@0.72.0
+  - @zag-js/dom-query@0.72.0
+
+## 0.71.0
+
+### Minor Changes
+
+- [`b3a251e`](https://github.com/chakra-ui/zag/commit/b3a251e5e10b9b27af353e0f41117329846b14e9) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - We no longer ship `src` files in the packages.
+
+- [`c9616cb`](https://github.com/chakra-ui/zag/commit/c9616cb6bdc8028648f799e9771ff49f00e03454) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - Add support for `api.getClearTriggerProps()` to render a clear
+  trigger that clears the accepted files.
+
+### Patch Changes
+
+- Updated dependencies [[`b3a251e`](https://github.com/chakra-ui/zag/commit/b3a251e5e10b9b27af353e0f41117329846b14e9)]:
+  - @zag-js/core@0.71.0
+  - @zag-js/anatomy@0.71.0
+  - @zag-js/types@0.71.0
+  - @zag-js/utils@0.71.0
+  - @zag-js/dom-query@0.71.0
+  - @zag-js/file-utils@0.71.0
+  - @zag-js/i18n-utils@0.71.0
+
+## 0.70.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.70.0
+  - @zag-js/core@0.70.0
+  - @zag-js/types@0.70.0
+  - @zag-js/utils@0.70.0
+  - @zag-js/dom-query@0.70.0
+  - @zag-js/file-utils@0.70.0
+  - @zag-js/i18n-utils@0.70.0
+
+## 0.69.0
+
+### Patch Changes
+
+- [`7a6b6e7`](https://github.com/chakra-ui/zag/commit/7a6b6e7fff9de69620d47431515bc0a4cdac3c75) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - Fix issue where `directory: true` doesn't work
+
+- Updated dependencies [[`bf57d7b`](https://github.com/chakra-ui/zag/commit/bf57d7b3933daf9974eaefc443da6f3c37706bb4)]:
+  - @zag-js/dom-query@0.69.0
+  - @zag-js/i18n-utils@0.69.0
+  - @zag-js/file-utils@0.69.0
+  - @zag-js/anatomy@0.69.0
+  - @zag-js/core@0.69.0
+  - @zag-js/types@0.69.0
+  - @zag-js/utils@0.69.0
+
+## 0.68.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.68.1
+  - @zag-js/core@0.68.1
+  - @zag-js/types@0.68.1
+  - @zag-js/utils@0.68.1
+  - @zag-js/dom-query@0.68.1
+  - @zag-js/file-utils@0.68.1
+  - @zag-js/i18n-utils@0.68.1
+
+## 0.68.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.68.0
+  - @zag-js/core@0.68.0
+  - @zag-js/types@0.68.0
+  - @zag-js/utils@0.68.0
+  - @zag-js/dom-query@0.68.0
+  - @zag-js/file-utils@0.68.0
+  - @zag-js/i18n-utils@0.68.0
+
+## 0.67.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.67.0
+  - @zag-js/core@0.67.0
+  - @zag-js/types@0.67.0
+  - @zag-js/utils@0.67.0
+  - @zag-js/dom-query@0.67.0
+  - @zag-js/file-utils@0.67.0
+  - @zag-js/i18n-utils@0.67.0
+
 ## 0.66.1
 
 ### Patch Changes

@@ -38,8 +38,10 @@
     "@zag-js/file-upload": "workspace:*",
     "@zag-js/file-utils": "workspace:*",
     "@zag-js/floating-panel": "workspace:*",
+    "@zag-js/focus-trap": "workspace:*",
     "@zag-js/focus-visible": "workspace:*",
     "@zag-js/form-utils": "workspace:*",
+    "@zag-js/highlight-word": "workspace:*",
     "@zag-js/hover-card": "workspace:*",
     "@zag-js/i18n-utils": "workspace:*",
     "@zag-js/interact-outside": "workspace:*",
@@ -83,15 +85,15 @@
     "@zag-js/vue": "workspace:*",
     "epic-spinners": "2.0.0",
     "form-serialize": "0.7.2",
-    "lucide-vue-next": "0.428.0",
+    "lucide-vue-next": "0.446.0",
     "match-sorter": "6.3.4",
-    "vue": "3.4.38",
-    "vue-router": "4.4.3"
+    "vue": "3.5.10",
+    "vue-router": "4.4.5"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@types/form-serialize": "0.7.4",
-    "@types/node": "22.4.1",
-    "nuxt": "3.12.4"
+    "@types/node": "22.7.4",
+    "nuxt": "3.13.2"
   }
 }

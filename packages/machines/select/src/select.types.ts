@@ -138,6 +138,12 @@ interface PublicContext<T extends CollectionItem = CollectionItem>
    * @default true
    */
   composite: boolean
+  /**
+   * Whether the value can be cleared by clicking the selected item.
+   *
+   * **Note:** this is only applicable for single selection
+   */
+  deselectable?: boolean
 }
 
 interface PrivateContext<T extends CollectionItem = CollectionItem> {
@@ -336,6 +342,14 @@ export interface MachineApi<T extends PropTypes = PropTypes, V extends Collectio
    * Function to set the positioning options of the select
    */
   reposition(options?: Partial<PositioningOptions>): void
+  /**
+   * Whether the select allows multiple selections
+   */
+  multiple: boolean
+  /**
+   * Whether the select is disabled
+   */
+  disabled: boolean
 
   getRootProps(): T["element"]
   getLabelProps(): T["label"]

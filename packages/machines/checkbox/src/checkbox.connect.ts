@@ -1,19 +1,24 @@
-import { dataAttr, visuallyHiddenStyle } from "@zag-js/dom-query"
+import { dataAttr, getEventTarget, visuallyHiddenStyle } from "@zag-js/dom-query"
 import type { NormalizeProps, PropTypes } from "@zag-js/types"
 import { parts } from "./checkbox.anatomy"
 import { dom } from "./checkbox.dom"
 import type { MachineApi, Send, State } from "./checkbox.types"
+import { isFocusVisible } from "@zag-js/focus-visible"
 
 export function connect<T extends PropTypes>(state: State, send: Send, normalize: NormalizeProps<T>): MachineApi<T> {
   const disabled = state.context.isDisabled
+  const readOnly = state.context.readOnly
+
   const focused = !disabled && state.context.focused
+  const focusVisible = !disabled && state.context.focusVisible
+
   const checked = state.context.isChecked
   const indeterminate = state.context.isIndeterminate
-  const readOnly = state.context.readOnly
 
   const dataAttrs = {
     "data-active": dataAttr(state.context.active),
     "data-focus": dataAttr(focused),
+    "data-focus-visible": dataAttr(focusVisible),
     "data-readonly": dataAttr(readOnly),
     "data-hover": dataAttr(state.context.hovered),
     "data-disabled": dataAttr(disabled),
@@ -52,7 +57,8 @@ export function connect<T extends PropTypes>(state: State, send: Send, normalize
           send({ type: "CONTEXT.SET", context: { hovered: false } })
         },
         onClick(event) {
-          if (event.target === dom.getHiddenInputEl(state.context)) {
+          const target = getEventTarget<Element>(event)
+          if (target === dom.getHiddenInputEl(state.context)) {
             event.stopPropagation()
           }
         },
@@ -100,6 +106,13 @@ export function connect<T extends PropTypes>(state: State, send: Send, normalize
         form: state.context.form,
         value: state.context.value,
         style: visuallyHiddenStyle,
+        onFocus() {
+          const focusVisible = isFocusVisible()
+          send({ type: "CONTEXT.SET", context: { focused: true, focusVisible } })
+        },
+        onBlur() {
+          send({ type: "CONTEXT.SET", context: { focused: false, focusVisible: false } })
+        },
         onClick(event) {
           if (readOnly) {
             event.preventDefault()

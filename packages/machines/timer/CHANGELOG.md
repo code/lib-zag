@@ -1,5 +1,194 @@
 # @zag-js/checkbox
 
+## 0.74.2
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.74.2
+  - @zag-js/core@0.74.2
+  - @zag-js/types@0.74.2
+  - @zag-js/utils@0.74.2
+  - @zag-js/dom-query@0.74.2
+
+## 0.74.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.74.1
+  - @zag-js/core@0.74.1
+  - @zag-js/types@0.74.1
+  - @zag-js/utils@0.74.1
+  - @zag-js/dom-query@0.74.1
+
+## 0.74.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.74.0
+  - @zag-js/core@0.74.0
+  - @zag-js/types@0.74.0
+  - @zag-js/utils@0.74.0
+  - @zag-js/dom-query@0.74.0
+
+## 0.73.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.73.1
+  - @zag-js/core@0.73.1
+  - @zag-js/types@0.73.1
+  - @zag-js/utils@0.73.1
+  - @zag-js/dom-query@0.73.1
+
+## 0.73.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.73.0
+  - @zag-js/core@0.73.0
+  - @zag-js/types@0.73.0
+  - @zag-js/utils@0.73.0
+  - @zag-js/dom-query@0.73.0
+
+## 0.72.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.72.0
+  - @zag-js/core@0.72.0
+  - @zag-js/types@0.72.0
+  - @zag-js/utils@0.72.0
+  - @zag-js/dom-query@0.72.0
+
+## 0.71.0
+
+### Minor Changes
+
+- [`b3a251e`](https://github.com/chakra-ui/zag/commit/b3a251e5e10b9b27af353e0f41117329846b14e9) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - We no longer ship `src` files in the packages.
+
+### Patch Changes
+
+- Updated dependencies [[`b3a251e`](https://github.com/chakra-ui/zag/commit/b3a251e5e10b9b27af353e0f41117329846b14e9)]:
+  - @zag-js/core@0.71.0
+  - @zag-js/anatomy@0.71.0
+  - @zag-js/types@0.71.0
+  - @zag-js/utils@0.71.0
+  - @zag-js/dom-query@0.71.0
+
+## 0.70.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.70.0
+  - @zag-js/core@0.70.0
+  - @zag-js/types@0.70.0
+  - @zag-js/utils@0.70.0
+  - @zag-js/dom-query@0.70.0
+
+## 0.69.0
+
+### Patch Changes
+
+- Updated dependencies [[`bf57d7b`](https://github.com/chakra-ui/zag/commit/bf57d7b3933daf9974eaefc443da6f3c37706bb4)]:
+  - @zag-js/dom-query@0.69.0
+  - @zag-js/anatomy@0.69.0
+  - @zag-js/core@0.69.0
+  - @zag-js/types@0.69.0
+  - @zag-js/utils@0.69.0
+
+## 0.68.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.68.1
+  - @zag-js/core@0.68.1
+  - @zag-js/types@0.68.1
+  - @zag-js/utils@0.68.1
+  - @zag-js/dom-query@0.68.1
+
+## 0.68.0
+
+### Minor Changes
+
+- [`f079c60`](https://github.com/chakra-ui/zag/commit/f079c603d71bb6bbd4b63f750343c6fe2f668d4f) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - - Introduces new area and control parts for better anatomy and
+  structure.
+
+  - [BREAKING] Move `role"timer` to new area part.
+  - Automatically hide the action triggers based on the action prop passed.
+
+  **BEFORE:**
+
+  ```tsx
+  <div>
+    <div {...api.getRootProps()}>
+      <div {...api.getItemProps({ type: "days" })}>{api.formattedTime.days}</div>
+      <div {...api.getSeparatorProps()}>:</div>
+      <div {...api.getItemProps({ type: "hours" })}>{api.formattedTime.hours}</div>
+      <div {...api.getSeparatorProps()}>:</div>
+      <div {...api.getItemProps({ type: "minutes" })}>{api.formattedTime.minutes}</div>
+      <div {...api.getSeparatorProps()}>:</div>
+      <div {...api.getItemProps({ type: "seconds" })}>{api.formattedTime.seconds}</div>
+    </div>
+    <div>
+      <button {...api.getActionTriggerProps({ action: "start" })}>START</button>
+      <button {...api.getActionTriggerProps({ action: "pause" })}>PAUSE</button>
+      <button {...api.getActionTriggerProps({ action: "resume" })}>RESUME</button>
+      <button {...api.getActionTriggerProps({ action: "reset" })}>RESET</button>
+    </div>
+  </div>
+  ```
+
+  **AFTER:**
+
+  ```tsx
+  <div {...api.getRootProps()}>
+    <div {...api.getAreaProps()}>
+      <div {...api.getItemProps({ type: "days" })}>{api.formattedTime.days}</div>
+      <div {...api.getSeparatorProps()}>:</div>
+      <div {...api.getItemProps({ type: "hours" })}>{api.formattedTime.hours}</div>
+      <div {...api.getSeparatorProps()}>:</div>
+      <div {...api.getItemProps({ type: "minutes" })}>{api.formattedTime.minutes}</div>
+      <div {...api.getSeparatorProps()}>:</div>
+      <div {...api.getItemProps({ type: "seconds" })}>{api.formattedTime.seconds}</div>
+    </div>
+    <div {...api.getControlProps()}>
+      <button {...api.getActionTriggerProps({ action: "start" })}>START</button>
+      <button {...api.getActionTriggerProps({ action: "pause" })}>PAUSE</button>
+      <button {...api.getActionTriggerProps({ action: "resume" })}>RESUME</button>
+      <button {...api.getActionTriggerProps({ action: "reset" })}>RESET</button>
+    </div>
+  </div>
+  ```
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.68.0
+  - @zag-js/core@0.68.0
+  - @zag-js/types@0.68.0
+  - @zag-js/utils@0.68.0
+  - @zag-js/dom-query@0.68.0
+
+## 0.67.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/anatomy@0.67.0
+  - @zag-js/core@0.67.0
+  - @zag-js/types@0.67.0
+  - @zag-js/utils@0.67.0
+
 ## 0.66.1
 
 ### Patch Changes

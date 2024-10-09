@@ -197,19 +197,16 @@ export class TreeNode {
     parentNode?.insertAfter(target.value, node)
   }
 
-  toJSON(): any {
+  json(): any {
     const json: any = {
       value: this.value,
     }
-
     if (this.hasChildNodes()) {
-      json.children = this.children.map((child) => child.toJSON())
+      json.children = this.children.map((child) => child.json())
     }
-
     if (this.parentNode) {
       json.parent = this.parentNode.value
     }
-
     return json
   }
 
